@@ -1,0 +1,105 @@
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    background-color: grey;
+    align-items: center; /*centrer sur y*/
+    justify-content: center; /*centrer sur x*/
+    height: 100vh;
+}
+
+.video{
+    width: 100%;
+}
+
+.controls{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    flex-wrap: wrap;
+    background-color: black;
+
+    transform: translateY(100%) translateY(-5px); /*apparaitre les bouttons lors d'un survol*/
+    transition: all 0.2s;
+}
+
+.vide{
+    width: 100%;
+    position: relative;
+    max-width: 700px;
+    overflow: hidden;
+
+}
+
+.vide:hover .controls{
+    transform: translateY(0);
+}
+
+.buttons button{
+    cursor: pointer;
+    background: none;
+    color: white;
+    border: 0;
+    outline: 0;
+}
+
+/*avoir le boutton play*/
+
+.buttons #play-pause::before{
+    content: '\f144'; /*le code du boutton play*/
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 15px;
+    display: inline-block;
+    font-family: 'font Awesome 5 free';
+}
+
+/*avoir le boutton pause play*/
+
+.buttons #play-pause.play::before {
+    content: '\f144';
+}
+
+.buttons #play-pause.pause::before {
+    content: '\f28b';
+}
+
+
+/*la video lecture*/
+
+.couleur-bar{
+    height: 10px;
+    width: 100%;
+    background: black;
+    cursor: pointer;
+}
+
+.couleur-juice{
+    height: 9px;
+    background:khaki ;
+
+}
+
+#mute {
+    position: relative;
+    top: -4px;
+}
+
+
+.buttons {
+    padding: 10px;
+}
+
+
+
+
+
